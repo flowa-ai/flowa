@@ -1,7 +1,7 @@
 Flowa pre-made datasets
 /flowa/datasets
 
-# Current Datasets (as of V1.1.5)
+# Current Datasets (as of V1.1.6)
   -> music_data.csv (age,gender,genre)
       SAMPLE:
        * 48,female,HipHop
