@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flowa"
-version = "1.1.6"
+version = "1.1.7"
 description = "flowa - Decision Trees & Label Encoding"
 readme = "README.md"
 authors = [{ name = "flowa (Discord: @flow.a)", email = "flowa.dev@gmail.com" }]
@@ -25,7 +25,7 @@ classifiers=[
 ]
 keywords = ['flowa']
 requires-python = ">=3.7.0"
-dependencies = ['io', 'numpy', 'pandas', 'pathlib']
+dependencies = ['io', 'sys', 'numpy', 'pandas', 'pathlib', 'warnings']
 
 [project.urls]
 Github = 'https://github.com/flowa-ai'

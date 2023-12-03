@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: flowa
-Version: 1.1.5
+Version: 1.1.7
 Summary: flowa - Decision Trees & Label Encoding
 Home-page: https://github.com/flowa-ai/flowa
 Author: flowa (Discord: @flow.a)
@@ -27,6 +27,8 @@ License: MIT License
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
 Project-URL: Github, https://github.com/flowa-ai
+Project-URL: Repository, https://github.com/flowa-ai/flowa/tree/master
+Project-URL: PyPi, https://pypi.org/project/flowa/
 Keywords: flowa
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Development Status :: 4 - Beta
@@ -51,7 +53,7 @@ License-File: LICENSE
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V1.1.5)
+flowa: (V1.1.7)
 
 Python Machine Learning, Decision Trees, and Label Encoders.
 ```
