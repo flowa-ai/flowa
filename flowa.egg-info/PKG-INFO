@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: flowa
-Version: 1.1.9
+Version: 1.2.0
 Summary: flowa - Decision Trees & Label Encoding
 Home-page: https://github.com/flowa-ai/flowa
 Author: flowa (Discord: @flow.a)
@@ -53,7 +53,7 @@ License-File: LICENSE
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V1.1.8)
+flowa: (V1.2.0)
 
 Python Machine Learning, Decision Trees, and Label Encoders.
 ```
