@@ -25,7 +25,7 @@ classifiers=[
 ]
 keywords = ['flowa']
 requires-python = ">=3.7.0"
-dependencies = ['numpy', 'pandas', 'pathlib', 'warnings']
+dependencies = ['numpy', 'pandas', 'pathlib']
 
 [project.urls]
 Github = 'https://github.com/flowa-ai'
