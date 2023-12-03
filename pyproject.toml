@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flowa"
-version = "1.1.8"
+version = "1.2.0"
 description = "flowa - Decision Trees & Label Encoding"
 readme = "README.md"
 authors = [{ name = "flowa (Discord: @flow.a)", email = "flowa.dev@gmail.com" }]
