@@ -21,7 +21,7 @@ def get_version(*args, **kwargs) -> dict:
         "PYTHON_VERSION": 3.7,
         "FLOWA_MAJOR": 1,
         "FLOWA_MINOR": 1,
-        "FLOWA_PATCH": 6,
-        "FLOWA_VERSION": "1.1.7",
+        "FLOWA_PATCH": 8,
+        "FLOWA_VERSION": "1.1.8",
     }
     return version
