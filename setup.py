@@ -48,4 +48,8 @@ setup(
     include_package_data=True,
     python_requires=">=3.7",
     keywords=["flowa"],
+    project_urls={
+        "https://github.com/flowa-ai/flowa/tree/master",
+        "https://pypi.org/project/flowa/"
+    },
 )

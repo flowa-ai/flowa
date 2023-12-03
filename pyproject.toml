@@ -29,3 +29,5 @@ dependencies = ['io', 'numpy', 'pandas', 'pathlib']
 
 [project.urls]
 Github = 'https://github.com/flowa-ai'
+Repository = "https://github.com/flowa-ai/flowa/tree/master"
+PyPi = "https://pypi.org/project/flowa/"
