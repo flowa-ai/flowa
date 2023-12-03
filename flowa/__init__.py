@@ -1,5 +1,5 @@
 """
-Flowa V1.1.5
+Flowa V1.1.6
 
 Copyright (c)     2023 flowa 
 License   (Lic.)  MIT
