@@ -1,0 +1,31 @@
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowa"
+version = "1.1.5"
+description = "flowa - Decision Trees & Label Encoding"
+readme = "README.md"
+authors = [{ name = "flowa (Discord: @flow.a)", email = "flowa.dev@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers=[
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Typing :: Typed",
+]
+keywords = ['flowa']
+requires-python = ">=3.7.0"
+dependencies = ['io', 'numpy', 'pandas', 'pathlib']
+
+[project.urls]
+Github = 'https://github.com/flowa-ai'
