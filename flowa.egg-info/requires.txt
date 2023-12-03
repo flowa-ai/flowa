@@ -1,5 +1,3 @@
-io
-sys
 numpy
 pandas
 pathlib
