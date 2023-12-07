@@ -1,4 +1,4 @@
-Flowa V1.2.0
+Flowa V1.2.2
 
 A package for easy and simple Decision Tree Classification
 Comes with Label Encoders, Decision Trees, and Node and Map objects for both the encoders and the trees.
