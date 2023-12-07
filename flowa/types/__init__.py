@@ -4,6 +4,7 @@ flowa.types
 Classes:
   - Node: Represents a Node in a Decision Tree.
   - Map: Represents a Map in an Encoder.
+  - Image: Represents an Image Object.
 """
 
 
@@ -98,3 +99,55 @@ class Map(object):
     def __call__(self, *args, **kwargs) -> dict:
         """Returns the value of the map."""
         return self.labels
+
+
+class Image:
+    """
+    A class for storing image data.
+
+    Attibutes:
+      prompt: The prompt used to generate the image.
+      url: The URL of the image.
+      model: The model used to generate the image.
+      width: The width of the image.
+      height: The height of the image.
+      seed: The seed used to generate the image.
+      logo: Whether or not to include the logo in the image.
+      content: The content of the image.
+
+    Methods:
+      __init__: Constructs an Image object.
+      __repr__: Returns the string representation of the image.
+      save(path): Saves the image to a file.
+    """
+
+    def __init__(
+        self,
+        prompt: str,
+        url: str,
+        model: str,
+        height: str,
+        width: str,
+        seed: str,
+        logo: str,
+        content: str,
+    ):
+        """Constructs an Image object."""
+        self.prompt: str = prompt
+        self.url: str = url
+        self.model: str = model
+        self.height: int = height
+        self.width: int = width
+        self.seed: int = seed
+        self.logo: bool = logo
+        self.content: str = content
+
+    def __repr__(self, *args, **kwargs) -> str:
+        """Returns the string representation of the image."""
+        return f"Image(prompt={self.prompt}, model={self.model}, height={self.height}, width={self.width}, seed={self.seed}, logo={self.logo}, url={self.url}, content={self.content[:10]}...)"
+
+    def save(self, path: str, *args, **kwargs) -> None:
+        """Saves the image to a file."""
+        with open(path, "wb") as file:
+            file.write(self.content)
+        return self
