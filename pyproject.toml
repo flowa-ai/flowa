@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flowa"
-version = "1.2.0"
-description = "flowa - Decision Trees & Label Encoding"
+version = "1.2.2"
+description = "flowa - Machine Learning Toolkit"
 readme = "README.md"
 authors = [{ name = "flowa (Discord: @flow.a)", email = "flowa.dev@gmail.com" }]
 license = { file = "LICENSE" }

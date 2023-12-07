@@ -1,5 +1,5 @@
 """
-Flowa V1.2.0
+Flowa V1.2.2
 
 Copyright (c)     2023 flowa 
 License   (Lic.)  MIT
@@ -10,6 +10,7 @@ Comes with Label Encoders, Decision Trees, and Node and Map objects for both the
 Classes:
   - Encoder: Encodes categorical data into numerical data.
   - Tree: Represents a Decision Tree.
+  - Images: Image generation model.
 
   - Dataset: Class for getting pre-made datasets.
 
@@ -105,6 +106,8 @@ from .utils import Dataset, datasets
 
 from .main import Encoder, Tree
 
+from .image import ImageModel
+
 version_dict: dict = get_version()
 python_tuple: tuple = get_python()
 
@@ -125,6 +128,7 @@ if (
 
 read_csv: object = pandas.read_csv
 convert: object = io.StringIO
+Images: ImageModel = ImageModel
 
 __version__ = version_dict.get("FLOWA_VERSION")
 __author__ = "flowa (Discord: @flow.a)"
@@ -137,6 +141,7 @@ __copyright__ = "Copyright (c) 2023 flowa"
 __all__: tuple = (
     "Encoder",
     "Dataset",
+    "Images",
     "Tree",
     "Node",
     "Map",
