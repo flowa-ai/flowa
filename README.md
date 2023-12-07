@@ -5,7 +5,7 @@
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V1.2.0)
+flowa: (V1.2.2)
 
 Python Machine Learning, Decision Trees, and Label Encoders.
 ```
@@ -51,6 +51,17 @@ print(encoder.inverse(prediction))
 #>>> ['Pop']
 
 ```
+Image generation:
+```python
+model: ImageModel[object] = ImageModel()
+image: ImageModel[str] = model.generate(
+    prompt="a cat", model="pixart", width=512, height=512, logo=False
+).save("some-file.png")
+
+#>>> flowa.types.Image
+
+```
+
 String Dataset to dataframe conversion:
 ```python
 from flowa import (
