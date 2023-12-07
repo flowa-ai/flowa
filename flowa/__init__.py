@@ -1,11 +1,10 @@
 """
-Flowa V1.2.2
+Flowa V1.2.3
 
 Copyright (c)     2023 flowa 
 License   (Lic.)  MIT
 
-A package for easy and simple Decision Tree Classification
-Comes with Label Encoders, Decision Trees, and Node and Map objects for both the encoders and the trees.
+A package for easy and simple Machine Learning, Image Generation, Decision Trees, Label Encoders, and more!
 
 Classes:
   - Encoder: Encodes categorical data into numerical data.
@@ -104,9 +103,7 @@ from .types import (
 )
 from .utils import Dataset, datasets
 
-from .main import Encoder, Tree
-
-from .image import ImageModel
+from .main import Encoder, Tree, ImageModel
 
 version_dict: dict = get_version()
 python_tuple: tuple = get_python()
