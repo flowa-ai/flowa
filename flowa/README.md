@@ -1,4 +1,4 @@
-Flowa V1.2.2
+Flowa V1.2.3
 
 A package for easy and simple Decision Tree Classification
 Comes with Label Encoders, Decision Trees, and Node and Map objects for both the encoders and the trees.
@@ -6,6 +6,7 @@ Comes with Label Encoders, Decision Trees, and Node and Map objects for both the
 Classes:
   - Encoder: Encodes categorical data into numerical data.
   - Tree: Represents a Decision Tree.
+  - Images: Image generation model.
 
   - Dataset: Class for getting pre-made datasets.
 

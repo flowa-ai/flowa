@@ -9,7 +9,7 @@ PYTHON_REQUIRED_MINOR = 7
 
 FLOWA_MAJOR = 1
 FLOWA_MINOR = 2
-FLOWA_PATCH = 2
+FLOWA_PATCH = 3
 
 def get_python(*args, **kwargs) -> tuple:
     return (PYTHON_REQUIRED_MAJOR, PYTHON_REQUIRED_MINOR)

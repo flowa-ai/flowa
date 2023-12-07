@@ -5,9 +5,9 @@
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V1.2.2)
+flowa: (V1.2.3)
 
-Python Machine Learning, Decision Trees, and Label Encoders.
+Python Machine Learning, Image Generation, Decision Trees, Label Encoders, and more!
 ```
 
 ## Installing

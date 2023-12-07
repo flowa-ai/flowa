@@ -23,7 +23,7 @@ with open(f"{path_absolute}/flowa/__init__.py", "r") as file:
 setup(
     name="flowa",
     version=version,
-    description="flowa - Decision Trees & Label Encoding",
+    description="flowa - Machine Learning Toolkit",
     long_description=Path(f"{path_absolute}/README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     url="https://github.com/flowa-ai/flowa",
