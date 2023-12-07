@@ -41,3 +41,22 @@ Classes:
       __repr__: Returns the string representation of the map.
       __str__: Returns the string representation of the map.
       __call__: Returns the value of the map.
+
+
+# Image:
+    A class for storing image data.
+
+    Attibutes:
+      prompt: The prompt used to generate the image.
+      url: The URL of the image.
+      model: The model used to generate the image.
+      width: The width of the image.
+      height: The height of the image.
+      seed: The seed used to generate the image.
+      logo: Whether or not to include the logo in the image.
+      content: The content of the image.
+
+    Methods:
+      __init__: Constructs an Image object.
+      __repr__: Returns the string representation of the image.
+      save(path): Saves the image to a file.
