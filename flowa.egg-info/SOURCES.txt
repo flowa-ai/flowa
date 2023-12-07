@@ -9,6 +9,7 @@ flowa.egg-info/SOURCES.txt
 flowa.egg-info/dependency_links.txt
 flowa.egg-info/requires.txt
 flowa.egg-info/top_level.txt
+flowa/image/__init__.py
 flowa/main/__init__.py
 flowa/main/decisiontree.py
 flowa/main/imagemodel.py

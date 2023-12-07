@@ -105,6 +105,8 @@ from .utils import Dataset, datasets
 
 from .main import Encoder, Tree, ImageModel
 
+from .image import ImageModel
+
 version_dict: dict = get_version()
 python_tuple: tuple = get_python()
 
