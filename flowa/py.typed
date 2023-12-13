@@ -1,1 +1,21 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+flowa/__init__.py
+flowa/_version.py
+flowa.egg-info/PKG-INFO
+flowa.egg-info/SOURCES.txt
+flowa.egg-info/dependency_links.txt
+flowa.egg-info/requires.txt
+flowa.egg-info/top_level.txt
+flowa/datasets/__init__.py
+flowa/ai/__init__.py
+flowa/ai/decisiontree.py
+flowa/ai/imagemodel.py
+flowa/ai/labelencoder.py
+flowa/types/__init__.py
+flowa/utils/__init__.py
 
