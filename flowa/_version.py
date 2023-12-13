@@ -7,8 +7,8 @@ Module containing the version info of Flowa.
 PYTHON_REQUIRED_MAJOR = 3
 PYTHON_REQUIRED_MINOR = 7
 
-FLOWA_MAJOR = 1
-FLOWA_MINOR = 2
+FLOWA_MAJOR = 10
+FLOWA_MINOR = 5
 FLOWA_PATCH = 3
 
 def get_python(*args, **kwargs) -> tuple:
