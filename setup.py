@@ -27,7 +27,7 @@ setup(
     long_description=Path(f"{path_absolute}/README.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     url="https://github.com/flowa-ai/flowa",
-    author='flowa (Discord: @flow.a)',
+    author='flowa (Discord: @flo.a)',
     author_email='flowa.dev@gmail.com',
     license='MIT',
     classifiers=[
@@ -48,8 +48,4 @@ setup(
     include_package_data=True,
     python_requires=">=3.7",
     keywords=["flowa"],
-    project_urls={
-        "https://github.com/flowa-ai/flowa/tree/master",
-        "https://pypi.org/project/flowa/"
-    },
 )

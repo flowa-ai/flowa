@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flowa"
-version = "1.2.3"
+version = "10.5.3"
 description = "flowa - Machine Learning Toolkit"
 readme = "README.md"
-authors = [{ name = "flowa (Discord: @flow.a)", email = "flowa.dev@gmail.com" }]
+authors = [{ name = "flowa (Discord: @flo.a)", email = "flowa.dev@gmail.com" }]
 license = { file = "LICENSE" }
 classifiers=[
     "License :: OSI Approved :: MIT License",
@@ -29,5 +29,5 @@ dependencies = ['numpy', 'pandas', 'pathlib']
 
 [project.urls]
 Github = 'https://github.com/flowa-ai'
-Repository = "https://github.com/flowa-ai/flowa/tree/master"
+Repository = "https://github.com/flowa-ai/"
 PyPi = "https://pypi.org/project/flowa/"

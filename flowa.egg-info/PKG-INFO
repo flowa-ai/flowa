@@ -1,10 +1,10 @@
 Metadata-Version: 2.1
 Name: flowa
-Version: 1.2.3
+Version: 10.5.3
 Summary: flowa - Machine Learning Toolkit
 Home-page: https://github.com/flowa-ai/flowa
-Author: flowa (Discord: @flow.a)
-Author-email: "flowa (Discord: @flow.a)" <flowa.dev@gmail.com>
+Author: flowa (Discord: @flo.a)
+Author-email: "flowa (Discord: @flo.a)" <flowa.dev@gmail.com>
 License: MIT License
         
         Copyright (c) 2023 flowa
@@ -28,7 +28,7 @@ License: MIT License
         SOFTWARE.
         
 Project-URL: Github, https://github.com/flowa-ai
-Project-URL: Repository, https://github.com/flowa-ai/flowa/tree/master
+Project-URL: Repository, https://github.com/flowa-ai/
 Project-URL: PyPi, https://pypi.org/project/flowa/
 Keywords: flowa
 Classifier: License :: OSI Approved :: MIT License
@@ -54,7 +54,7 @@ License-File: LICENSE
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V1.2.3)
+flowa: (V10.5.3)
 
 Python Machine Learning, Image Generation, Decision Trees, Label Encoders, and more!
 ```
@@ -70,7 +70,7 @@ py -3 -m pip install -U flowa
 
 # Simple Examples
 ```python
-from flowa import (
+from flowa.ai import (
     Encoder,
     Tree,
     Dataset,
@@ -113,7 +113,7 @@ image: ImageModel[str] = model.generate(
 
 String Dataset to dataframe conversion:
 ```python
-from flowa import (
+from flowa.ai import (
     Dataset,
     read_csv,
     convert
@@ -134,3 +134,4 @@ print(csv)
 
 # Links
 - [Github](https://github.com/flowa-ai)
+- [Project](https://pypi.org/project/flowa/)

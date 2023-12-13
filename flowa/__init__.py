@@ -1,5 +1,5 @@
 """
-Flowa V1.2.3
+Flowa V10.5.3
 
 Copyright (c)     2023 flowa 
 License   (Lic.)  MIT
@@ -7,18 +7,18 @@ License   (Lic.)  MIT
 A package for easy and simple Machine Learning, Image Generation, Decision Trees, Label Encoders, and more!
 
 Classes:
-  - Encoder: Encodes categorical data into numerical data.
-  - Tree: Represents a Decision Tree.
-  - Images: Image generation model.
+  - ai.Encoder: Encodes categorical data into numerical data.
+  - ai.Tree: Represents a Decision Tree.
+  - ai.ImageModel: Image generation model.
 
-  - Dataset: Class for getting pre-made datasets.
+  - ai.Dataset: Class for getting pre-made datasets.
 
   - Node: Represents a Node in a Decision Tree.
   - Map: Represents a Map in an Encoder.
 
 Functions:
-  - convert: Converts string of text into an object that can be converted into a dataframe using read_csv()
-  - read_csv: Reads a CSV file into a DataFrame.
+  - ai.convert: Converts string of text into an object that can be converted into a dataframe using read_csv()
+  - ai.read_csv: Reads a CSV file into a DataFrame.
 
 Constants:
   - PYTHON_REQUIRED_MAJOR: Major version of Python.
@@ -56,7 +56,7 @@ age,gender,genre
 '''
 
 
-from flowa import (
+from flowa.ai import (
     Encoder,
     Tree,
     read_csv,
@@ -86,26 +86,13 @@ print(encoder.inverse(prediction))
 
 """
 
-import io
 import sys
-import pandas
 
-from collections import Counter
 
 from ._version import (
     get_version,
     get_python,
 )
-
-from .types import (
-    Node,
-    Map,
-)
-from .utils import Dataset, datasets
-
-from .main import Encoder, Tree, ImageModel
-
-from .image import ImageModel
 
 version_dict: dict = get_version()
 python_tuple: tuple = get_python()
@@ -125,12 +112,8 @@ if (
         category=RuntimeWarning,
     )
 
-read_csv: object = pandas.read_csv
-convert: object = io.StringIO
-Images: ImageModel = ImageModel
-
-__version__ = version_dict.get("FLOWA_VERSION")
-__author__ = "flowa (Discord: @flow.a)"
+__version__ = "10.5.3"
+__author__ = "flowa (Discord: @flo.a)"
 __email__ = "flowa.dev@gmail.com"
 __discord__ = "@flow.a"
 __github__ = "https://github.com/flowa-ai"
