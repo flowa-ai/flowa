@@ -1,4 +1,4 @@
-Flowa V1.2.3
+Flowa V10.5.3
 
 A package for easy and simple Decision Tree Classification
 Comes with Label Encoders, Decision Trees, and Node and Map objects for both the encoders and the trees.
@@ -44,7 +44,7 @@ age,gender,genre
 '''
 
 
-from flowa import (
+from flowa.ai import (
     Encoder,
     Tree,
     read_csv,
