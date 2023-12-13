@@ -1,7 +1,7 @@
 Flowa pre-made datasets
 /flowa/datasets
 
-# Current Datasets (as of V1.2.3)
+# Current Datasets (as of V10.5.3)
   -> music_data.csv (age,gender,genre)
       SAMPLE:
        * 48,female,HipHop
@@ -24,7 +24,7 @@ Flowa pre-made datasets
 
 SAMPLE:
 ```python
-from flowa import (
+from flowa.ai import (
     Dataset,
     read_csv,
     convert
