@@ -1,5 +1,5 @@
 """
-Flowa V10.5.3
+Flowa V10.5.4
 
 Copyright (c)     2023 flowa 
 License   (Lic.)  MIT
@@ -15,6 +15,11 @@ Classes:
 
   - Node: Represents a Node in a Decision Tree.
   - Map: Represents a Map in an Encoder.
+
+  - Network: Create a neural network.
+  - Input(size): Create an input layer.
+  - Hidden(size, acitvation, *activation_args, **activation_kwargs): Create a hidden layer.
+  - Output(size): Create an output layer.
 
 Functions:
   - ai.convert: Converts string of text into an object that can be converted into a dataframe using read_csv()
@@ -93,6 +98,7 @@ from ._version import (
     get_version,
     get_python,
 )
+from .network import *
 
 version_dict: dict = get_version()
 python_tuple: tuple = get_python()
@@ -112,10 +118,10 @@ if (
         category=RuntimeWarning,
     )
 
-__version__ = "10.5.3"
+__version__ = "10.54"
 __author__ = "flowa (Discord: @flo.a)"
 __email__ = "flowa.dev@gmail.com"
-__discord__ = "@flow.a"
+__discord__ = "@flo.a"
 __github__ = "https://github.com/flowa-ai"
 __repo__ = "https://github.com/flowa-ai/flowa"
 __license__ = "MIT"
@@ -127,4 +133,45 @@ __all__: tuple = (
     "Tree",
     "Node",
     "Map",
+    "Module",
+    "Network",
+    "Input",
+    "Hidden",
+    "Output",
+    "Array",
+    "Seed",
+    "Random",
+    "get",
+    "remove",
+    "modules",
+    "seed",
+    "Sigmoid",
+    "Tanh",
+    "ReLU",
+    "LeakyReLU",
+    "ELU",
+    "Swish",
+    "Gaussion",
+    "Identity",
+    "BinaryStep",
+    "PReLU",
+    "Exponential",
+    "Softplus",
+    "Softsign",
+    "BentIdentity",
+    "ArcTan",
+    "SiLU",
+    "Mish",
+    "HardSigmoid",
+    "HardTanh",
+    "SoftExponential",
+    "ISRU",
+    "Sine",
+    "Cosine",
+    "SQNL",
+    "SoftClipping",
+    "BentIdentity2",
+    "LogLog",
+    "GELU",
+    "Softmin",
 )
