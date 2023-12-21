@@ -5,7 +5,7 @@
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V10.5.3)
+flowa: (V10.5.4)
 
 Python Machine Learning, Image Generation, Decision Trees, Label Encoders, and more!
 ```
@@ -19,10 +19,21 @@ python3 pip install -U flowa
 py -3 -m pip install -U flowa
 ```
 
-(1) -> Image Generation:
-```js
-model: ImageModel[object] = ImageModel()
-image: ImageModel[str] = model.generate(
-    prompt="a cat", model="pixart", width=512, height=512, logo=False
-).save("some-file.png")
+(1) -> Merge the `netwk` library.
+```python
+# Create neural networks:
+x = flowa.Array([[0, 0], [0, 1], [1, 0], [1, 1]])
+y = flowa.Array([[0], [1], [1], [0]])
+
+network = flowa.Network(
+    flowa.Input(2),
+    (
+        flowa.Hidden(4, flowa.Tanh), 
+        flowa.Hidden(2, flowa.Sigmoid)
+    ),
+    flowa.Output(1)
+)
+
+network.train(x, y, epoch=1000)
+print(network.predict(x))
 ```
