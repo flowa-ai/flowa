@@ -5,9 +5,9 @@
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-flowa: (V10.5.3)
+flowa: (V10.5.4)
 
-Python Machine Learning, Image Generation, Decision Trees, Label Encoders, and more!
+Python Machine Learning, Image Generation, Decision Trees, Label Encoders, Sequential, and more!
 ```
 
 ## Installing
@@ -20,6 +20,22 @@ py -3 -m pip install -U flowa
 ```
 
 # Simple Examples
+```python
+x = flowa.Array([[0, 0], [0, 1], [1, 0], [1, 1]])
+y = flowa.Array([[0], [1], [1], [0]])
+
+network = flowa.Network(
+    flowa.Input(2),
+    (
+        flowa.Hidden(4, flowa.Tanh), 
+        flowa.Hidden(2, flowa.Sigmoid)
+    ),
+    flowa.Output(1)
+)
+
+network.train(x, y, epoch=1000)
+print(network.predict(x))
+```
 ```python
 from flowa.ai import (
     Encoder,
@@ -55,7 +71,7 @@ Image generation:
 ```python
 model: ImageModel[object] = ImageModel()
 image: ImageModel[str] = model.generate(
-    prompt="a cat", model="pixart", width=512, height=512, logo=False
+    prompt="a cat", model="pixart", width=512, height=512
 ).save("some-file.png")
 
 #>>> flowa.types.Image

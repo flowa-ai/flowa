@@ -47,5 +47,8 @@ setup(
     packages=find_packages(exclude=("tests",)),
     include_package_data=True,
     python_requires=">=3.7",
-    keywords=["flowa"],
+    install_requires=[
+        'numpy',
+    ],
+    keywords = 'flow, flowa, flower, network, machine learning, ai, neural network, artificial intelligence, machine learning toolkit, deep learning, model'
 )

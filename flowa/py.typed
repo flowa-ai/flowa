@@ -2,6 +2,8 @@ CHANGELOG.md
 LICENSE
 MANIFEST.in
 README.md
+flowa-community-bg.jpeg
+flowa.jpeg
 pyproject.toml
 setup.py
 flowa/__init__.py
@@ -11,11 +13,12 @@ flowa.egg-info/SOURCES.txt
 flowa.egg-info/dependency_links.txt
 flowa.egg-info/requires.txt
 flowa.egg-info/top_level.txt
-flowa/datasets/__init__.py
 flowa/ai/__init__.py
 flowa/ai/decisiontree.py
 flowa/ai/imagemodel.py
 flowa/ai/labelencoder.py
+flowa/datasets/__init__.py
+flowa/network/__init__.py
+flowa/network/activations.py
 flowa/types/__init__.py
 flowa/utils/__init__.py
-
