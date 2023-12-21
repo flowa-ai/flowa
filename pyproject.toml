@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flowa"
-version = "10.5.3"
+version = "10.5.4"
 description = "flowa - Machine Learning Toolkit"
 readme = "README.md"
 authors = [{ name = "flowa (Discord: @flo.a)", email = "flowa.dev@gmail.com" }]
