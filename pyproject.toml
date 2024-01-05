@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "flowa"
-version = "10.5.4"
+version = "10.5.5"
 description = "flowa - Machine Learning Toolkit"
 readme = "README.md"
 authors = [{ name = "flowa (Discord: @flo.a)", email = "flowa.dev@gmail.com" }]
@@ -12,6 +12,10 @@ license = { file = "LICENSE" }
 classifiers=[
     "License :: OSI Approved :: MIT License",
     "Development Status :: 5 - Production/Stable",
+    "Development Status :: 4 - Beta",
+    "Development Status :: 3 - Alpha",
+    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 1 - Planning",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",

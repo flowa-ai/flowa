@@ -1,6 +1,6 @@
-'''
+"""
 ```
-netwk: (V2.12.5)
+flowa: (V10.5.5)
 
 Create fast, optimized, and easy-to-use neural networks.
 ```
@@ -8,10 +8,10 @@ Create fast, optimized, and easy-to-use neural networks.
 ## Installing
 ```shell
 # Linux/macOS
-python3 pip install -U netwk
+python3 pip install -U flowa
 
 # Windows
-py -3 -m pip install -U netwk
+py -3 -m pip install -U flowa
 ```
 
 ### FastFix:
@@ -21,7 +21,7 @@ py -3 -m pip install -U netwk
 
 # Usage
 ```python
-import netwk as nk
+import flowa.network as nk     # or import flowa as nk
 
 nk.Seed(52) # Optional, used for testing purposes.
 
@@ -98,11 +98,11 @@ print(network.predict(x)
 
 # Make your own!
 ```python
-import netwk as nk
+import flowa as nk
 
 class MyModule(nk.Module):
     def __init__(self, *args, **kwargs):
-        super().__init__("MyModule", *args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def forward(self, x):
         return x
@@ -113,7 +113,7 @@ class MyModule(nk.Module):
 
 # Seeing used modules + seed.
 ```python
-import netwk as nk
+import flowa as nk
 
 ...Defining A Neural Network Here...
 
@@ -144,23 +144,30 @@ print(nk.seed())
 # 34
 */
 ```
-'''
+"""
 
 import numpy as np
 import pickle
+import inspect
 from .activations import *
+
 
 class _Netwk:
     modules = []
     seed = np.random.randint(1, 99999999)
     np.random.seed(seed)
 
+
 def modules(*args, **kwargs):
     return _Netwk.modules
 
+
 def seed(value=None, *args, **kwargs):
-    if value: _Netwk.seed = value
+    if value:
+        _Netwk.seed = value
+        np.random.seed(_Netwk.seed)
     return _Netwk.seed
+
 
 def get(name, *args, **kwargs):
     for item in _Netwk.modules:
@@ -178,26 +185,42 @@ def remove(name, *args, **kwargs):
 
 
 class Module:
-    '''
-    Module class
+    def __init__(self, *args, **kwargs) -> None:
+        self.args: tuple = args
+        self.kwargs: dict = kwargs
+        for key, value in self.kwargs.items():
+            setattr(self, key, value)
 
-    Parameters:
-        name (str): Name of the module.
-    '''
-    def __init__(self, name, *args, **kwargs):
-        self.name = name
-        _Netwk.modules.append((name, self))
-        self.args = args
-        self.kwargs = kwargs
+        self.name: str = self.__class__.__name__
+        self.line: int = inspect.getsourcelines(self.__class__)[1]
+        self.lenmethods: int = len(self.__dir__())
+        self.methods: list = [
+            method for method in self.__dir__() if not method.startswith("__")
+        ]
+        self.methods.sort()
+        _Netwk.modules.append((self.name, self))
 
-    def __str__(self, *args, **kwargs):
-        return f"{self.name}({', '.join(map(str, self.args))}, {', '.join(f'{k}={v}' for k, v in self.kwargs.items())})"
+    def __str__(self) -> str:
+        return f"{self.name}(line={self.line}, methods={self.lenmethods})"
 
-    def __repr__(self, *args, **kwargs):
-        return self.__str__()
+    def __repr__(self) -> str:
+        return self.describe
 
-    def __call__(self, name, *args, **kwargs):
-        return self.__class__(name, *args, **kwargs)
+    def __call__(self, *args, **kwargs) -> object:
+        return self
+
+    @property
+    def describe(self) -> str:
+        mdict: dict = {
+            "name": self.name,
+            "line": self.line,
+            "method_info": {"total": self.lenmethods, "methods": self.methods},
+        }
+        return str(mdict)
+
+    @property
+    def total(self) -> int:
+        return self.lenmethods
 
     def forward(self, x, *args, **kwargs):
         return x
@@ -206,7 +229,7 @@ class Module:
         return 1
 
     def save(self, path, *args, **kwargs):
-        ''' Save the module to a file.'''
+        """Save the module to a file."""
         with open(path, "wb") as f:
             pickle.dump(self, f)
 
@@ -214,13 +237,13 @@ class Module:
 
     @staticmethod
     def load(path, *args, **kwargs):
-        '''Load a module from a file.'''
+        """Load a module from a file."""
         with open(path, "rb") as f:
             return pickle.load(f)
 
 
 class Network(Module):
-    '''
+    """
     Neural Network
 
     Parameters:
@@ -231,9 +254,10 @@ class Network(Module):
     Methods:
         train(x, y, epoch=1, *args, **kwargs): Train the network.
         predict(x, *args, **kwargs): Predict the output of the network.
-    '''
+    """
+
     def __init__(self, input_layer, hidden_layers, output_layer, *args, **kwargs):
-        super().__init__("Network", input_layer, hidden_layers, output_layer)
+        super().__init__(*args, **kwargs)
         self.input = input_layer
         self.input_layer = input_layer.size
         self.output = output_layer
@@ -325,30 +349,29 @@ class Network(Module):
 
 
 class Input(Module):
-    '''
+    """
     Input Layer
 
     Parameters:
         size (int): size of input layer
-    '''
-    def __init__(self, size=2, *args, **kwargs):
-        super().__init__("Input", size)
-        self.size = size
+    """
 
-    def __str__(self):
-        return f"Input(size: {self.size})"
+    def __init__(self, size=2, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.size = size
 
 
 class Hidden(Module):
-    '''
+    """
     Hidden Layer
 
     Parameters:
         size (int): size of hidden layer
         activation (function): activation function
-    '''
+    """
+
     def __init__(self, size=2, activation=Sigmoid, *args, **kwargs):
-        super().__init__("Hidden", size, activation)
+        super().__init__(*args, **kwargs)
         self.size = size
         self.activation_method = activation
         self.activation_args = args
@@ -361,56 +384,37 @@ class Hidden(Module):
     def backward(self, x, *args, **kwargs):
         return self.activation.backward(x)
 
-    def __str__(self, *args, **kwargs):
-        return f"Hidden(size: {self.size})"
-
 
 class Output(Module):
-    '''
+    """
     Output Layer
 
     Parameters:
         size (int): size of output layer
-    '''
+    """
+
     def __init__(self, size=1, *args, **kwargs):
-        super().__init__("Output", size)
+        super().__init__(*args, **kwargs)
         self.size = size
-
-    def forward(self, x, *args, **kwargs):
-        return x
-
-    def backward(self, x, *args, **kwargs):
-        return 1
-
-    def __str__(self, *args, **kwargs):
-        return f"Output(size: {self.size})"
 
 
 def Array(array, *args, **kwargs):
-    '''Creates an array of modules.'''
+    """Creates an array of modules."""
     return np.array(array)
 
 
 def Seed(number=0, *args, **kwargs):
-    '''Set the seed for the random number generator.'''
+    """Set the seed for the random number generator."""
     np.random.seed(number)
     _Netwk.seed = number
     return number
 
 
 def Random(size, *args, **kwargs):
-    '''Creates a random array of size `size`'''
+    """Creates a random array of size `size`"""
     return np.random.randn(size)
 
 
-__version__ = "2.12.5"
-__author__ = "flowa.ai"
-__license__ = "MIT"
-__copyright__ = "Copyright (c) 2023 flowa"
-__discord__ = "@flo.a"
-__email__ = "flowa.dev@gmail.com"
-__github__ = "https://github.com/flowa-ai"
-__repo__ = "https://github.com/flowa-ai/netwk"
 __all__ = [
     "Module",
     "Network",
