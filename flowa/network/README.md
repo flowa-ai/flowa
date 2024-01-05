@@ -1,11 +1,11 @@
-<div align="center"><a href="[https://i.ibb.co/cTyQysp/netwk-back-modified.png](https://i.ibb.co/cTyQysp/netwk-back-modified.png)"><img src="https://i.ibb.co/cTyQysp/netwk-back-modified.png" alt="flowa" border="0" width="430"></a></div>
+<a href="https://ibb.co/885w17s](https://i.ibb.co/bdBVcKm/flowa.jpg)"><img src="https://i.ibb.co/bdBVcKm/flowa.jpg" alt="flowa" border="0" width="145"></a>
 
-# [netkw - Neural Network Toolkit](https://pypi.org/project/netwk)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/flowa-ai/netwk/blob/master/LICENSE)
+# [flowa - Machine Learning Toolkit](https://pypi.org/project/flowa)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/flowa/flowa/blob/main/LICENSE)
 [![Python Versions](https://img.shields.io/badge/python-3.7%20|%203.8%20|%203.9%20|%203.10%20|%203.11%20|%203.12%20-blue)](https://www.python.org/downloads/)
 
 ```
-netwk: (V2.12.5)
+flowa: (V10.5.5)
 
 Create fast, optimized, and easy-to-use neural networks.
 ```
@@ -13,10 +13,10 @@ Create fast, optimized, and easy-to-use neural networks.
 ## Installing
 ```shell
 # Linux/macOS
-python3 pip install -U netwk
+python3 pip install -U flowa
 
 # Windows
-py -3 -m pip install -U netwk
+py -3 -m pip install -U flowa
 ```
 
 ### FastFix:
@@ -26,7 +26,7 @@ py -3 -m pip install -U netwk
 
 # Usage
 ```python
-import netwk as nk
+import flowa.network as nk     # or import flowa as nk
 
 nk.Seed(52) # Optional, used for testing purposes.
 
@@ -37,7 +37,7 @@ y = nk.Array([[0], [1], [1], [0]])
 network = nk.Network(
     nk.Input(2),
     (
-        nk.Hidden(3, nk.Tanh), 
+        nk.Hidden(4, nk.Tanh), 
         nk.Hidden(2, nk.Sigmoid)
     ),
     nk.Output(1)
@@ -103,11 +103,11 @@ print(network.predict(x)
 
 # Make your own!
 ```python
-import netwk as nk
+import flowa as nk
 
 class MyModule(nk.Module):
     def __init__(self, *args, **kwargs):
-        super().__init__("MyModule", *args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def forward(self, x):
         return x
@@ -118,7 +118,7 @@ class MyModule(nk.Module):
 
 # Seeing used modules + seed.
 ```python
-import netwk as nk
+import flowa as nk
 
 ...Defining A Neural Network Here...
 
@@ -149,3 +149,7 @@ print(nk.seed())
 # 34
 */
 ```
+
+# Links
+- [Github](https://github.com/flowa-ai)
+- [Project](https://pypi.org/project/flowa/)
