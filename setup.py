@@ -33,6 +33,10 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Development Status :: 5 - Production/Stable",
+        "Development Status :: 4 - Beta",
+        "Development Status :: 3 - Alpha",
+        "Development Status :: 2 - Pre-Alpha",
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
         "License :: OSI Approved :: MIT License",
