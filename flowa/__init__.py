@@ -1,5 +1,5 @@
 """
-Flowa V10.5.4
+Flowa V10.5.5
 
 Copyright (c)     2023 flowa 
 License   (Lic.)  MIT
@@ -118,7 +118,7 @@ if (
         category=RuntimeWarning,
     )
 
-__version__ = "10.54"
+__version__ = "10.5.5"
 __author__ = "flowa (Discord: @flo.a)"
 __email__ = "flowa.dev@gmail.com"
 __discord__ = "@flo.a"
