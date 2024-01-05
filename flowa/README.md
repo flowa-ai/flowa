@@ -1,4 +1,4 @@
-Flowa V10.5.4
+Flowa V10.5.5
 
 A package for easy and simple Decision Tree Classification
 Comes with Label Encoders, Decision Trees, and Node and Map objects for both the encoders and the trees.
